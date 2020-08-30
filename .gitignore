@@ -1,0 +1,9 @@
+
+# Logs
+api/v3/logs
+
+# Dependency directories
+node_modules/
+
+# auth
+api/v3/auth.php
