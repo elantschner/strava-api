@@ -15,6 +15,7 @@
     <title>Strava</title>
 </head>
 <body>
+    <h1>My STRAVA-App</h1>
     <ul>
         <li><a href="api/v3/athlete.php">ATHLETE</a></li>
         <li><a href="api/v3/activities.php">ACTIVITIES</a></li>
