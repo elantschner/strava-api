@@ -1,7 +1,8 @@
 <?php
     // Set token
-    if (isset($_COOKIE["access_token"])) {
-        $access_token = $_COOKIE["access_token"];
+    if (isset($_COOKIE["authorization"])) {
+        $data = json_decode($_COOKIE["authorization"], true);
+        $access_token = $data["access_token"];
     } else {
         header("Location: api/v3/auth.php");
     }
@@ -25,9 +26,9 @@
 
     <div>
         <?php
-            $data = json_decode($_COOKIE["authorization"], true);
             echo "<h2>".$data["athlete"]["firstname"]." ".$data["athlete"]["lastname"]."</h2>";
-
+            echo "<p><img src=".$data["athlete"]["profile"]." style='border-radius:50%'></p>";
+            echo "<p>access_token : ".$data["access_token"]."</p>";
             echo "<pre>";
             var_dump($data);
             echo "</pre>"
